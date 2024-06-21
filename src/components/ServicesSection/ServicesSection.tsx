@@ -84,39 +84,19 @@ const ServicesSection: React.FC = () => {
                   className="w-6 h-6 bg-no-repeat bg-center"
                 />
               </motion.li>
-              <AnimatePresence>
-                {selectedService === service && isMobile && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1, transitionEnd: { height: 'auto' } }}
-                    exit={{ height: 0, opacity: 0, transitionEnd: { height: 0 } }}
-                    transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    className="overflow-hidden mt-4 text-sm text-white p-4 bg-blue-600 rounded-lg"
-                  >
-                    <motion.p
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 20 }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      className="text-justify"
+              {selectedService === service && isMobile && (
+                <div className="mt-4 text-sm text-white p-4 bg-blue-600 rounded-lg transition-all duration-300 ease-in-out">
+                  <p className="text-justify">{service.description}</p>
+                  <div className="flex justify-center">
+                    <a
+                      href={service.link}
+                      className="mt-4 bg-emtechThird text-white py-3 px-6 rounded"
                     >
-                      {service.description}
-                    </motion.p>
-                    <div className="flex justify-center">
-                      <motion.a
-                        href={service.link}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="mt-4 bg-emtechThird text-white py-3 px-6 rounded"
-                      >
-                        Find out how
-                      </motion.a>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                      Find out how
+                    </a>
+                  </div>
+                </div>
+              )}
             </motion.div>
           ))}
         </motion.ul>
