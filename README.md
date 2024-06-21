@@ -87,7 +87,3 @@ Este componente proporciona una sección de contacto donde los usuarios pueden e
 
 El componente Footer se utiliza para mostrar el pie de página de la aplicación, incluyendo enlaces y otra información relevante.
 
-## Capturas de Pantalla
-
-A continuación se muestran algunas capturas de pantalla de la aplicación en diferentes dispositivos.
-
