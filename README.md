@@ -38,20 +38,6 @@ Sigue estos pasos para poner en marcha la aplicación.
 
     Navega a `http://localhost:5173/` para ver la aplicación en funcionamiento.
 
-### Construcción para Producción
-
-1. **Construir la aplicación:**
-
-    ```sh
-    npm run build
-    ```
-
-2. **Previsualizar la construcción de producción:**
-
-    ```sh
-    npm run preview
-    ```
-
 ## Componentes Trabajados
 
 En esta sección se describen los componentes que se han desarrollado y utilizado en la aplicación:
@@ -104,13 +90,4 @@ El componente Footer se utiliza para mostrar el pie de página de la aplicación
 ## Capturas de Pantalla
 
 A continuación se muestran algunas capturas de pantalla de la aplicación en diferentes dispositivos.
-
-### Modo Escritorio
-
-![mobile-responsive](https://github.com/albertooherm/emtech-test/assets/159101294/56172c5c-5364-4342-925f-db614afea03f)
-
-
-### Modo Responsivo
-
-![web-responsive](https://github.com/albertooherm/emtech-test/assets/159101294/ce9bee2f-2dd7-4ef6-ad6d-f6420f88d243)
 
