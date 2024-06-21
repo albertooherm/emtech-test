@@ -107,8 +107,10 @@ A continuación se muestran algunas capturas de pantalla de la aplicación en di
 
 ### Modo Escritorio
 
-![Modo Escritorio]()
+![mobile-responsive](https://github.com/albertooherm/emtech-test/assets/159101294/56172c5c-5364-4342-925f-db614afea03f)
+
 
 ### Modo Responsivo
 
-![Modo Responsivo]()
+![web-responsive](https://github.com/albertooherm/emtech-test/assets/159101294/ce9bee2f-2dd7-4ef6-ad6d-f6420f88d243)
+
