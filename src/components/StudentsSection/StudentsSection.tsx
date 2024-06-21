@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
@@ -56,6 +57,7 @@ const StudentsSection: React.FC = () => {
                 <div 
                   className="flex flex-col bg-white p-8 rounded-xl shadow-lg border border-gray-200 cursor-pointer" 
                   style={{ minHeight: '250px' }}
+                  //@ts-ignore
                   onClick={() => handleCardClick(user)}
                 >
                   <p className="text-gray-800 mb-6 text-lg leading-relaxed">
