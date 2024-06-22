@@ -12,6 +12,7 @@ import arrow from '../assets/images/arrow.png';
 import flecha from '../assets/images/flecha.png';
 import emtech from '../assets/images/Emtech_logo.svg';
 import background2 from '../assets/images/background2.png';
+import arrowdown from '../assets/images/arrow-down.png'
 
 const images = {
   logo,
@@ -26,6 +27,7 @@ const images = {
   shadow,
   arrow,
   flecha,
+  arrowdown,
   home,
   emtech
 };

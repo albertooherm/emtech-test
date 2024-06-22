@@ -78,8 +78,7 @@ const ServicesSection: React.FC = () => {
                 <span className="flex-1">{service.name}</span>
                 <motion.div
                   initial={{ backgroundImage: `url(${images.flecha})` }}
-                  whileHover={{ backgroundImage: `url(${images.arrow})`, backgroundSize: 'contain' }}
-                  whileTap={{ backgroundImage: `url(${images.arrow})`, backgroundSize: 'contain' }}
+                  animate={{ backgroundImage: selectedService === service && isMobile ? `url(${images.arrowdown})` : `url(${images.flecha})` }}
                   transition={{ duration: 0.3 }}
                   className="w-6 h-6 bg-no-repeat bg-center"
                 />
