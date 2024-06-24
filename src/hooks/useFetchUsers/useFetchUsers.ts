@@ -1,19 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
-interface User {
-  name: {
-    first: string;
-    last: string;
-  };
-  location: {
-    state: string;
-    country: string;
-  };
-  picture: {
-    large: string;
-  };
-}
+import { User } from '../../utils/types/User/UserTypes';
 
 const useFetchUsers = () => {
   const [users, setUsers] = useState<User[]>([]);
