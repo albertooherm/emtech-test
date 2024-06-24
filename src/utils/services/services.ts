@@ -17,7 +17,7 @@ export const services: Service[] = [
         { text: 'Our academies', bold: true },
         { text: ' are designed to keep pace with the rapid evolution of technology, offering a cutting-edge learning experience.' }
       ],
-      link: 'https://emtech.digital/digital_review'
+      link: 'https://emtech.digital/training_academies'
     },
     {
       name: 'Centers of excellence',
@@ -26,7 +26,7 @@ export const services: Service[] = [
         { text: 'we offer specialized expertise and strategic guidance', bold: true },
         { text: ' to ensure successful implementation, maximizing return on investment and positive business impact.' }
       ],
-      link: 'https://emtech.digital/digital_review'
+      link: 'https://emtech.digital/centers_excellence'
     },
     {
       name: 'Talent acquisition',
@@ -34,7 +34,7 @@ export const services: Service[] = [
         { text: 'We power technology talent acquisition', bold: true },
         { text: ' by blending deep understanding, strategic sourcing, and holistic evaluation; we tailor our services to meet the unique needs of each client, ensuring a perfect fit between the talent and the corporate culture.' }
       ],
-      link: 'https://emtech.digital/digital_review'
+      link: 'https://emtech.digital/talent_acquisition'
     },
     {
       name: 'Talent ecosystems',
@@ -42,6 +42,6 @@ export const services: Service[] = [
         { text: 'EmTech Institute works with', bold: true },
         { text: ' governments, foundations, and universities to empower underserved populations with crucial technology skills, enabling them to access rewarding careers in the tech sector and contribute meaningfully to the competitiveness of their communities.' }
       ],
-      link: 'https://emtech.digital/digital_review'
+      link: 'https://emtech.digital/talent_ecosystems'
     }
   ];

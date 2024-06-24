@@ -105,6 +105,7 @@ const ServicesSection: React.FC = () => {
                     <div className="flex justify-center">
                       <a
                         href={service.link}
+                        target="_blank"
                         className="mt-4 bg-emtechThird text-white py-3 px-6 rounded"
                       >
                         Find out how
@@ -117,15 +118,15 @@ const ServicesSection: React.FC = () => {
           ))}
         </motion.ul>
       </div>
-      {!isMobile && (
+      {!isMobile && selectedService && (
         <div
           className="flex-1 relative bg-cover bg-center"
-          style={{ backgroundImage: `url(${selectedService?.name === services[0].name ? images.background : images.background2})` }}
+          style={{ backgroundImage: `url(${selectedService.name === services[0].name ? images.background : images.background2})` }}
         >
           <div className="absolute inset-0 flex flex-col justify-center p-8 text-white bg-black bg-opacity-50">
             <AnimatePresence>
               <motion.div
-                key={selectedService?.name}
+                key={selectedService.name}
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 100 }}
@@ -133,9 +134,10 @@ const ServicesSection: React.FC = () => {
                 className="text-lg mt-20"
               >
                 <div className="mb-12 h-1 bg-emtechBlue w-44"></div>
-                <p className="text-start">{selectedService?.description && renderDescription(selectedService.description)}</p>
+                <p className="text-start">{selectedService.description && renderDescription(selectedService.description)}</p>
                 <a
-                  href="https://emtech.digital/digital_review"
+                  href={selectedService.link}
+                  target="_blank"
                   className="mt-12 inline-block bg-emtechBlue text-white py-3 px-12 rounded"
                 >
                   Find out how
