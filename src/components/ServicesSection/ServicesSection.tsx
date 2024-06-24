@@ -17,6 +17,7 @@ const itemVariants = {
 const ServicesSection: React.FC = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(window.innerWidth > 768 ? services[0] : null);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
+  const [hoveredService, setHoveredService] = useState<Service | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,6 +38,18 @@ const ServicesSection: React.FC = () => {
       return prevSelectedService === service ? null : service;
     });
   }, []);
+
+  const handleMouseEnter = (service: Service) => {
+    if (!isMobile) {
+      setHoveredService(service);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      setHoveredService(null);
+    }
+  };
 
   return (
     <div className="flex flex-col md:flex-row w-full min-h-screen">
@@ -61,14 +74,16 @@ const ServicesSection: React.FC = () => {
                   selectedService === service && isMobile ? 'selected' : ''
                 }`}
                 onClick={() => handleServiceClick(service)}
+                onMouseEnter={() => handleMouseEnter(service)}
+                onMouseLeave={handleMouseLeave}
                 style={{ willChange: 'transform, opacity' }}
               >
                 <span className="flex-1">{service.name}</span>
                 <motion.div
                   initial={{ backgroundImage: `url(${images.flecha})` }}
-                  animate={{ backgroundImage: selectedService === service && isMobile ? `url(${images.arrowdown})` : `url(${images.flecha})` }}
+                  animate={{ backgroundImage: selectedService === service && isMobile ? `url(${images.arrowdown})` : hoveredService === service ? `url(${images.arrow})` : `url(${images.flecha})` }}
                   transition={{ duration: 0.3 }}
-                  className="w-6 h-8 bg-no-repeat bg-center"
+                  className={`w-6 h-8 bg-no-repeat bg-center ${hoveredService === service ? 'bg-contain' : ''}`}
                 />
               </motion.li>
               <AnimatePresence>
