@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import images from '../../utils/images';
 import { AnimatePresence, motion } from 'framer-motion';
 import { services } from '../../utils/services/services';
-import { Service } from '../../utils/types/Services/ServicesTypes';
+import { Service, ServiceDescriptionPart } from '../../utils/types/Services/ServicesTypes';
 
 const listVariants = {
   hidden: { opacity: 0 },
@@ -51,6 +51,12 @@ const ServicesSection: React.FC = () => {
     }
   };
 
+  const renderDescription = (description: ServiceDescriptionPart[]) => {
+    return description.map((part, index) =>
+      part.bold ? <strong key={index}>{part.text}</strong> : <span key={index}>{part.text}</span>
+    );
+  };
+
   return (
     <div className="flex flex-col md:flex-row w-full min-h-screen">
       <div className="bg-blue-600 flex-1 flex flex-col justify-center p-8 text-white">
@@ -95,7 +101,7 @@ const ServicesSection: React.FC = () => {
                     transition={{ duration: 0.2, ease: "easeInOut" }}
                     className="mt-4 text-sm text-white p-4 bg-blue-600 rounded-lg"
                   >
-                    <p className="text-justify">{service.description}</p>
+                    <p className="text-start">{renderDescription(service.description)}</p>
                     <div className="flex justify-center">
                       <a
                         href={service.link}
@@ -127,7 +133,7 @@ const ServicesSection: React.FC = () => {
                 className="text-lg mt-20"
               >
                 <div className="mb-12 h-1 bg-emtechBlue w-44"></div>
-                <p className="text-justify">{selectedService?.description}</p>
+                <p className="text-start">{selectedService?.description && renderDescription(selectedService.description)}</p>
                 <a
                   href="https://emtech.digital/digital_review"
                   className="mt-12 inline-block bg-emtechBlue text-white py-3 px-12 rounded"
