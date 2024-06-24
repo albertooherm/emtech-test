@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       <StudentsSection />
       <BlurSection />
       <PartnersCarousel />
-      <AnimatedText boldText="EmTech Institute," regularText="where technology meets talent." />
+      <AnimatedText boldText="EmTech Institute, " regularText="where technology meets talent." />
       <ContactSection />
       <Footer />
     </>
