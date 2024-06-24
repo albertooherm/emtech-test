@@ -62,7 +62,6 @@ const Header: React.FC = () => {
               <img
                 src={images.logo}
                 alt="Emtech Institute"
-                className="h-8 w-auto sm:h-8"
               />
             </Link>
           </div>
