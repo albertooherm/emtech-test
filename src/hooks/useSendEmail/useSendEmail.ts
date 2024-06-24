@@ -17,20 +17,20 @@ const useSendEmail = () => {
     };
 
     emailjs.send(
-      'service_ppytz94', // ID de servicio de EmailJS
-      'template_fk4wa3q', // ID de plantilla de EmailJS
+      'service_ppytz94',
+      'template_fk4wa3q',
       templateParams,
-      'G8eJCHpTb59JUCGwE' // ID de usuario de EmailJS
+      'G8eJCHpTb59JUCGwE'
     )
     .then((response) => {
       setLoading(false);
-      setSuccess('Email enviado exitosamente!');
-      console.log('Email enviado exitosamente!', response.status, response.text);
+      setSuccess('Email sent successfully!');
+      console.log('Email sent successfully!', response.status, response.text);
     })
     .catch((error) => {
       setLoading(false);
-      setError('Error al enviar el email.');
-      console.error('Error al enviar el email:', error);
+      setError('Error sending email.');
+      console.error('Error sending email:', error);
     });
   };
 
